@@ -1,1 +1,38 @@
-/* start code here */
+/* Card Flip CSS Code */
+ /* This container is needed for the front and back side */
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height:300px;
+  border:1px solid #03ade9;
+  perspective: 1000px;
+}
+/* do a horizontal flip when you move the mouse over the flip box comtainer*/
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+/* position the front and back side */
+.flip-card-front, .Flip-card-back {
+  position:absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;   /*safari*/
+  backface-visibility: hidden;
+}
+/* style the front side (fallback id image is missing */
+.flip-card-front {
+  background-color: #eb1d28;
+  color:black
+}
+/* style back side */
+.flip-card-back {
+background-color: #eb1d28;
+color: goldenrod;
+transform: rotateY(540deg);
+
+}
