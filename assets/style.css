@@ -36,3 +36,30 @@ color: goldenrod;
 transform: rotateY(540deg);
 
 }
+=======
+/* start code here */
+
+header {
+  text-align: center;
+  font-size: 70px;
+}
+
+/* NAV BAR SCROLLING FUNCTIONALITY */
+
+div.scrollmenu {
+  background-color: black;
+  overflow: auto;
+  white-space: nowrap;
+}
+
+div.scrollmenu::-webkit-scrollbar {
+  display: none;
+}
+
+div.scrollmenu label {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
