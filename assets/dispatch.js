@@ -33,3 +33,40 @@ function displayCharacterOptions() {
 }
 
 displayCharacterOptions();
+
+
+const randomMovie = {
+
+
+
+
+
+}
+
+// movie postcard function
+// variables for the html
+var titleInput = document.getElementById("title")
+var searchButton = document.getElementById("search")
+var yearInput = document.getElementById("year")
+// varible for the img for html
+var image = document.getElementById('img')
+
+// search button
+searchButton.addEventListener("click", function () {
+  var movieTitle = titleInput.value.trim()
+  var year = yearInput.value.trim()
+// api key and the the search box functions
+  fetch("http://www.omdbapi.com/?s=" + movieTitle + "&y=" + year + "&apikey=8f0e2144")
+    .then((res) => res.json())
+    .then((json) => {
+      console.log(json)
+      var link = json.Search[0].Poster
+      image.setAttribute("src", link)
+
+
+    });
+});
+
+
+
+
