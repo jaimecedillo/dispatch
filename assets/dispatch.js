@@ -13,4 +13,3 @@ const marvel = {
 };
 marvel.render();
 
-// 1358e3065848c5522a414c3abe17171de8965532bcc25a8d815b08a07d1f66b16e2079cff
