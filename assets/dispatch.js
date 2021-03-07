@@ -9,6 +9,7 @@ const marvel = {
 
     let urlApi = "https://gateway.marvel.com:/v1/public/characters?name=" + hero +
       "&ts=1&apikey=cc25a8d815b08a07d1f66b16e2079cff&hash=9e25f1c95eb74bd5d42f42216b82ded3";
+      
     fetch(urlApi)
       .then((res) => {
         return res.json();
