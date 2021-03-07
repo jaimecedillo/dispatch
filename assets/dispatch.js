@@ -33,7 +33,7 @@ function displayCharacterOptions() {
       console.log(data)
       let charNum = 20; //! THIS CAN BE THE NUMBER FOUND IN THE API
       for (let i = 0; i < charNum; ++i) {
-        let charName = "Name Here"; //! THIS IS THE CHARACTER NAME FROM API
+        let charName = data.results[i].name //! THIS IS THE CHARACTER NAME FROM API
         let newChar = document.createElement("label");
         newChar.setAttribute("for", "cardoption");
         let inputStuff = document.createElement("input");
