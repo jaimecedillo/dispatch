@@ -1,138 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Document</title>
-    <link rel="stylesheet" href="./assets/style.css" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <body>
-    <header>
-      Marvel Title for Webpage
-    </header>
-    <!-- NAV BAR INSIDE A FOR LOOP TO GENERATE CHARACTER OPTIONS -->
-    <nav>
-      <div class="scrollmenu">
-        <label for="cardoption"></label>
-          <button id="reset" style="background-color: red; border: 1px solid rgb(82, 0, 0); border-radius: 10px;">Reset Cards</button></label
-        >
-      </div>
-    </nav>
-    <main>
-      <!-- wasnt sure how many cards to make so I did eight -->
-      <!-- card one -->
-      <div class="flip-card">
-        <div class="flip-card-inner">
-          <div class="flip-card-front">
-            <!-- image of character goes here-->
-          </div>
-          <div class="flip-card-back">
-            <h1>Name</h1> 
-            <p>Info about marvel character</p> 
-          </div>
+  <title>Marvel Characters</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Marvel:ital@1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+  <link rel="stylesheet" href="./assets/style.css" />
+</head>
+
+<body>
+  <header class="has-background-black is-size-1 has-text-centered has-text-white pt-2">
+    <img class="logo" src="./assets/marvel-logo.jpg" alt="marvel logo" style="width:130px;height:52px;">
+    Characters
+  </header>
+  <!-- NAV BAR INSIDE A FOR LOOP TO GENERATE CHARACTER OPTIONS -->
+  <nav>
+    <div class="scrollmenu">
+      <label for="cardoption"></label>
+      <button class="has-text-white button is-normal is-rounded" id="reset">Reset
+        Cards</button></label>
+    </div>
+  </nav>
+  <main>
+    <!-- wasnt sure how many cards to make so I did eight -->
+    <!-- card one -->
+    <div class="flip-card" id="hero-1">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img id="heroimg-1">
+        </div>
+        <div class="flip-card-back">
+          <h1>Name</h1>
+          <p>Info about marvel character</p>
         </div>
       </div>
+    </div>
 
-      <!-- card two -->
-      <div class="flip-card">
-        <div class="flip-card-inner">
-          <div class="flip-card-front">
-            <!-- image of character goes here-->
-          </div>
-          <div class="flip-card-back">
-            <h1>Name</h1> 
-            <p>Info about marvel character</p> 
-          </div>
+    <!-- card two -->
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <!-- image of character goes here-->
+        </div>
+        <div class="flip-card-back">
+          <h1>Name</h1>
+          <p>Info about marvel character</p>
         </div>
       </div>
+    </div>
 
-      <!-- card three -->
-      <div class="flip-card">
-        <div class="flip-card-inner">
-          <div class="flip-card-front">
-            <!-- image of character goes here-->
-          </div>
-          <div class="flip-card-back">
-            <h1>Name</h1> 
-            <p>Info about marvel character</p> 
-          </div>
+    <!-- card three -->
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <!-- image of character goes here-->
+        </div>
+        <div class="flip-card-back">
+          <h1>Name</h1>
+          <p>Info about marvel character</p>
         </div>
       </div>
+    </div>
 
-      <!-- card four -->
-      <div class="flip-card">
-        <div class="flip-card-inner">
-          <div class="flip-card-front">
-            <!-- image of character goes here-->
-          </div>
-          <div class="flip-card-back">
-            <h1>Name</h1> 
-            <p>Info about marvel character</p> 
-          </div>
+    <!-- card four -->
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <!-- image of character goes here-->
+        </div>
+        <div class="flip-card-back">
+          <h1>Name</h1>
+          <p>Info about marvel character</p>
         </div>
       </div>
+    </div>
 
-      <!-- card five -->
-      <div class="flip-card">
-        <div class="flip-card-inner">
-          <div class="flip-card-front">
-            <!-- image of character goes here-->
-          </div>
-          <div class="flip-card-back">
-            <h1>Name</h1> 
-            <p>Info about marvel character</p> 
-          </div>
+    <!-- card five -->
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <!-- image of character goes here-->
+        </div>
+        <div class="flip-card-back">
+          <h1>Name</h1>
+          <p>Info about marvel character</p>
         </div>
       </div>
+    </div>
 
-      <!-- card six -->
-      <div class="flip-card">
-        <div class="flip-card-inner">
-          <div class="flip-card-front">
-            <!-- image of character goes here-->
-          </div>
-          <div class="flip-card-back">
-            <h1>Name</h1> 
-            <p>Info about marvel character</p> 
-          </div>
+    <!-- card six -->
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <!-- image of character goes here-->
+        </div>
+        <div class="flip-card-back">
+          <h1>Name</h1>
+          <p>Info about marvel character</p>
         </div>
       </div>
+    </div>
 
-      <!-- card seven -->
-      <div class="flip-card">
-        <div class="flip-card-inner">
-          <div class="flip-card-front">
-            <!-- image of character goes here-->
-          </div>
-          <div class="flip-card-back">
-            <h1>Name</h1> 
-            <p>Info about marvel character</p> 
-          </div>
+    <!-- card seven -->
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <!-- image of character goes here-->
+        </div>
+        <div class="flip-card-back">
+          <h1>Name</h1>
+          <p>Info about marvel character</p>
         </div>
       </div>
+    </div>
 
-      <!-- card eight -->
-      <div class="flip-card">
-        <div class="flip-card-inner">
-          <div class="flip-card-front">
-            <!-- image of character goes here-->
-          </div>
-          <div class="flip-card-back">
-            <h1>Name</h1> 
-            <p>Info about marvel character</p> 
-          </div>
+    <!-- card eight -->
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <!-- image of character goes here-->
+        </div>
+        <div class="flip-card-back">
+          <h1>Name</h1>
+          <p>Info about marvel character</p>
         </div>
       </div>
-    </main>
+    </div>
+  </main>
 
-    <footer>
+  <footer class="has-background-black is-size-3 has-text-centered has-text-white">
+    <a href="http://marvel.com" target="_blank" class="mr-5 p-2">Data provided by Marvel. ©
+      2021 MARVEL</a>
 
-    </footer>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
-    <script src="./assets/dispatch.js"></script>
-  </body>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+  <script src="./assets/dispatch.js"></script>
+</body>
+
 </html>
