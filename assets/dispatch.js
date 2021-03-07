@@ -1,9 +1,9 @@
 
 // "https://gateway.marvel.com:/v1/public/characters?name=spider-man&ts=1&apikey=cc25a8d815b08a07d1f66b16e2079cff&hash=9e25f1c95eb74bd5d42f42216b82ded3";
+// mavel characters list
+let heroName = ["Spider-Man", "thor", 'captain america', 'Black Panther', 'doctor strange', 'Ant-Man (Scott Lang)', 'Iron man', 'Hulk', 'Deadpool', 'wolverine', 'Captain Marvel (Carol Danvers)', 'Daredevil'];
 
-let heroName = ["Spider-Man", "thor", 'capitan-america', 'Black Panther', 'dr. strange', 'Antman', 'Iron man', 'Hulk', 'Deadpool', 'GhostRider', 'CaptainMarvel', 'Daredevil'];
-
-
+// fucntion to fetch marvel charactes img, name and 
 const marvel = {
   render: (hero) => {
 
@@ -17,21 +17,21 @@ const marvel = {
         console.log(json)
         for (var i = 0; i < json.data.results.length; i++) {
           let name = json.data.results[i].name
-          let heroImg = `<img class="logo" src="${json.data.results[i].thumbnail.path}.${json.data.results[i].thumbnail.extension}" alt="${name}"style="width:298px;height:298px;">`
+          let heroImg = `<img class="logo" src="${json.data.results[i].thumbnail.path}.${json.data.results[i].thumbnail.extension}" alt="${name}"style="width:296px;height:396px;">`
           let herobio = json.data.results[i].description
           $('main').append(`
-<div class="flip-card" id="hero-${i + 1}">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-         ${heroImg}
+          <div class="flip-card" id="hero-${i + 1}">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              ${heroImg}
+            </div>
+            <div class="flip-card-back">
+              <h1 class="card-header is-size-3 has-text-centered has-text-weight-semibold Name-${i + 1}">${name}</h1>
+              <div class="content  has-background-black has-text-centered has-text-white">${herobio}</div>
+              <button class="button is-centered is-info is-outlined is-rounded is-centered">Movies</button>
+            </div>
+          </div>
         </div>
-        <div class="flip-card-back">
-          <h1 class="Name-${i + 1}">${name}</h1>
-          <p>${herobio}</p>
-          <button class="button is-info is-outlined is-rounded">Movies</button>
-        </div>
-      </div>
-    </div>
 `)
         }
       });
@@ -48,28 +48,28 @@ heroName.forEach(function (item) {
 
 console.log(marvel + "CODE");
 
-// function displayCharacterOptions() {
-//   fetch(urlApi)
-//     .then((res) => {
-//       return res.json();
-//     })
-//     .then((data) => {
-//       let charNum = 20; //! THIS CAN BE THE NUMBER FOUND IN THE API
-//       for (let i = 0; i < charNum; ++i) {
-//         // let charName = data.data.results[i].name; //! THIS IS THE CHARACTER NAME FROM API
-//         let newChar = document.createElement("label");
-//         newChar.setAttribute("for", "cardoption");
-//         let inputStuff = document.createElement("input");
-//         inputStuff.setAttribute("type", "checkbox");
+function displayCharacterOptions() {
+  fetch(urlApi)
+    .then((res) => {
+      return res.json();
+    })
+    .then((data) => {
+      let charNum = 20; //! THIS CAN BE THE NUMBER FOUND IN THE API
+      for (let i = 0; i < charNum; ++i) {
+        // let charName = data.data.results[i].name; //! THIS IS THE CHARACTER NAME FROM API
+        let newChar = document.createElement("label");
+        newChar.setAttribute("for", "cardoption");
+        let inputStuff = document.createElement("input");
+        inputStuff.setAttribute("type", "checkbox");
 
-//         newChar.innerHTML = charName;
-//         newChar.appendChild(inputStuff);
-//         document.querySelector(".scrollmenu").appendChild(newChar);
-//       }
-//     });
-// }
+        newChar.innerHTML = charName;
+        newChar.appendChild(inputStuff);
+        document.querySelector(".scrollmenu").appendChild(newChar);
+      }
+    });
+}
 
-// displayCharacterOptions();
+displayCharacterOptions();
 
 const randomMovie = {};
 
