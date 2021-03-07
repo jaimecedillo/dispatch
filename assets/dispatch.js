@@ -1,51 +1,24 @@
-
-// "https://gateway.marvel.com:/v1/public/characters?name=spider-man&ts=1&apikey=cc25a8d815b08a07d1f66b16e2079cff&hash=9e25f1c95eb74bd5d42f42216b82ded3";
-
-let heroName = ["Spider-Man", "thor", 'captain america', 'Black Panther', 'doctor strange', 'Ant-Man (Scott Lang)', 'Iron man', 'Hulk', 'Deadpool', 'Captain Marvel (Carol Danvers)', 'wolverine', 'Daredevil'];
-
+let newChar = document.createElement("label");
+const urlApi =
+  "https://gateway.marvel.com:/v1/public/characters?ts=1&apikey=cc25a8d815b08a07d1f66b16e2079cff&hash=9e25f1c95eb74bd5d42f42216b82ded3";
 
 const marvel = {
-  render: (hero) => {
+  render: () => {
+    let contentHTML = "";
 
-    let urlApi = "https://gateway.marvel.com:/v1/public/characters?name=" + hero +
-      "&ts=1&apikey=cc25a8d815b08a07d1f66b16e2079cff&hash=9e25f1c95eb74bd5d42f42216b82ded3";
-      
     fetch(urlApi)
       .then((res) => {
         return res.json();
       })
       .then((json) => {
-        console.log(json)
-        for (var i = 0; i < json.data.results.length; i++) {
-          let name = json.data.results[i].name
-          let heroImg = `<img class="logo" src="${json.data.results[i].thumbnail.path}.${json.data.results[i].thumbnail.extension}" alt="${name}"style="width:298px;height:298px;">`
-          let herobio = json.data.results[i].description
-          $('main').append(`
-<div class="flip-card" id="hero-${i + 1}">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-         ${heroImg}
-        </div>
-        <div class="flip-card-back">
-          <h1 class="Name-${i + 1}">${name}</h1>
-          <p>${herobio}</p>
-          <button class="button is-info is-outlined is-rounded">Movies</button>
-        </div>
-      </div>
-    </div>
-`)
-        }
+        // for (const hero of json.data.results) {
+        //   let urlHero = hero.urls[0].url;
+        //   let heroImg = `<img class="logo" src="${hero.thumbnail.path}.${hero.thumbnail.extension}" alt="${hero.name}"style="width:298px;height:298px;" alt="">`
+        // }
       });
   },
 };
-
-heroName.forEach(function (item) {
-
-  marvel.render(item);
-
-})
-
-
+marvel.render();
 
 console.log(marvel + "CODE");
 
@@ -57,7 +30,7 @@ function displayCharacterOptions() {
     .then((data) => {
       let charNum = 20; //! THIS CAN BE THE NUMBER FOUND IN THE API
       for (let i = 0; i < charNum; ++i) {
-        // let charName = data.data.results[i].name; //! THIS IS THE CHARACTER NAME FROM API
+        let charName = data.data.results[i].name; //! THIS IS THE CHARACTER NAME FROM API
         let newChar = document.createElement("label");
         newChar.setAttribute("for", "cardoption");
         let inputStuff = document.createElement("input");
@@ -89,10 +62,10 @@ searchButton.addEventListener("click", function () {
   // api key and the the search box functions
   fetch(
     "http://www.omdbapi.com/?s=" +
-    movieTitle +
-    "&y=" +
-    year +
-    "&apikey=8f0e2144"
+      movieTitle +
+      "&y=" +
+      year +
+      "&apikey=8f0e2144"
   )
     .then((res) => res.json())
     .then((json) => {
