@@ -23,6 +23,7 @@ const marvel = {
           let heroComic = json.data.results[i].urls[0].url
 
           $('main').append(`
+          <div class="container">
           <div class="flip-card" id="hero-${i + 1}">
           <div class="flip-card-inner">
               <div class="flip-card-front">
@@ -38,7 +39,9 @@ const marvel = {
                   <button class="button is-centered is-info is-outlined is-rounded">Movies</button>
              </div>
           </div>
-      </div>
+        </div>
+        </div>
+
 `)
         }
       });
@@ -56,6 +59,7 @@ heroName.forEach(function (item) {
 console.log(marvel + "CODE");
 
 function displayCharacterOptions() {
+  
   fetch(urlApi)
     .then((res) => {
       return res.json();
