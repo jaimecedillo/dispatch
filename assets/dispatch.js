@@ -20,6 +20,7 @@ const marvel = {
           let heroImg = `<img class="logo" src="${json.data.results[i].thumbnail.path}.${json.data.results[i].thumbnail.extension}" alt="${name}"style="width:296px;height:396px;">`
           let herobio = json.data.results[i].description
           $('main').append(`
+          <div class="container">
           <div class="flip-card" id="hero-${i + 1}">
           <div class="flip-card-inner">
             <div class="flip-card-front">
@@ -31,6 +32,7 @@ const marvel = {
               <button class="button is-centered is-info is-outlined is-rounded is-centered">Movies</button>
             </div>
           </div>
+        </div>
         </div>
 `)
         }
@@ -49,6 +51,7 @@ heroName.forEach(function (item) {
 console.log(marvel + "CODE");
 
 function displayCharacterOptions() {
+  
   fetch(urlApi)
     .then((res) => {
       return res.json();
