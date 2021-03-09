@@ -18,22 +18,30 @@ const marvel = {
         for (var i = 0; i < json.data.results.length; i++) {
           let name = json.data.results[i].name
           let heroImg = `<img class="logo" src="${json.data.results[i].thumbnail.path}.${json.data.results[i].thumbnail.extension}" alt="${name}"style="width:296px;height:396px;">`
-          let herobio = json.data.results[i].description
+          // let herobio = json.data.results[i].description
+          let heroBio = json.data.results[i].urls[1].url
+          let heroComic = json.data.results[i].urls[0].url
+
           $('main').append(`
           <div class="container">
           <div class="flip-card" id="hero-${i + 1}">
           <div class="flip-card-inner">
-            <div class="flip-card-front">
-              ${heroImg}
-            </div>
-            <div class="flip-card-back">
-              <h1 class="card-header is-size-3 has-text-centered has-text-weight-semibold Name-${i + 1}">${name}</h1>
-              <div class="content  has-background-black has-text-centered has-text-white">${herobio}</div>
-              <button class="button is-centered is-info is-outlined is-rounded is-centered">Movies</button>
-            </div>
+              <div class="flip-card-front">
+                  ${heroImg}
+              </div>
+          <div class="flip-card-back has-background-danger-dark">
+              <h1 class="Name-${i + 1} card-header is-size-3 has-text-centered has-text-weight-semibold has-text-white">
+                      ${name}</h1>
+                  <button class="btn-${i + 1}" onClick="javascript:window.open('${heroBio}', '_blank');">${name}'s
+                      Bio</button>
+                      <button class="btn-${i + 1}" onClick="javascript:window.open('${heroComic}', '_blank');">${name}'s
+                      Comics</button>
+                  <button class="button is-centered is-info is-outlined is-rounded">Movies</button>
+             </div>
           </div>
         </div>
         </div>
+
 `)
         }
       });
