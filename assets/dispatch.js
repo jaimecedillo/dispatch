@@ -19,6 +19,7 @@ const marvel = {
           let name = json.data.results[i].name
           let heroImg = `<img class="logo" src="${json.data.results[i].thumbnail.path}.${json.data.results[i].thumbnail.extension}" alt="${name}"style="width:296px;height:396px;">`
           let herobio = json.data.results[i].description
+          let heroUrl = json.data.results[i].url
           $('main').append(`
           <div class="flip-card" id="hero-${i + 1}">
           <div class="flip-card-inner">
