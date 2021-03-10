@@ -35,7 +35,9 @@ const marvel = {
                       Bio</button>
                       <button class="btn-${i + 1}" onClick="javascript:window.open('${heroComic}', '_blank');">${name}'s
                       Comics</button>
+                  <a href="./movie.html">     
                   <button class="button is-centered is-info is-outlined is-rounded">Movies</button>
+                  </a>
              </div>
           </div>
       </div>
@@ -55,55 +57,27 @@ heroName.forEach(function (item) {
 
 console.log(marvel + "CODE");
 
-function displayCharacterOptions() {
-  fetch(urlApi)
-    .then((res) => {
-      return res.json();
-    })
-    .then((data) => {
-      let charNum = 20; //! THIS CAN BE THE NUMBER FOUND IN THE API
-      for (let i = 0; i < charNum; ++i) {
-        // let charName = data.data.results[i].name; //! THIS IS THE CHARACTER NAME FROM API
-        let newChar = document.createElement("label");
-        newChar.setAttribute("for", "cardoption");
-        let inputStuff = document.createElement("input");
-        inputStuff.setAttribute("type", "checkbox");
+// function displayCharacterOptions() {
+//   fetch(urlApi)
+//     .then((res) => {
+//       return res.json();
+//     })
+//     .then((data) => {
+//       let charNum = 20; //! THIS CAN BE THE NUMBER FOUND IN THE API
+//       for (let i = 0; i < charNum; ++i) {
+//         // let charName = data.data.results[i].name; //! THIS IS THE CHARACTER NAME FROM API
+//         let newChar = document.createElement("label");
+//         newChar.setAttribute("for", "cardoption");
+//         let inputStuff = document.createElement("input");
+//         inputStuff.setAttribute("type", "checkbox");
 
-        newChar.innerHTML = charName;
-        newChar.appendChild(inputStuff);
-        document.querySelector(".scrollmenu").appendChild(newChar);
-      }
-    });
-}
+//         newChar.innerHTML = charName;
+//         newChar.appendChild(inputStuff);
+//         document.querySelector(".scrollmenu").appendChild(newChar);
+//       }
+//    });    
+// }
 
-displayCharacterOptions();
+// displayCharacterOptions();
 
-const randomMovie = {};
 
-// movie postcard function
-// variables for the html
-var titleInput = document.getElementById("title");
-var searchButton = document.getElementById("search");
-var yearInput = document.getElementById("year");
-// varible for the img for html
-var image = document.getElementById("img");
-
-// search button
-searchButton.addEventListener("click", function () {
-  var movieTitle = titleInput.value.trim();
-  var year = yearInput.value.trim();
-  // api key and the the search box functions
-  fetch(
-    "http://www.omdbapi.com/?s=" +
-    movieTitle +
-    "&y=" +
-    year +
-    "&apikey=8f0e2144"
-  )
-    .then((res) => res.json())
-    .then((json) => {
-      console.log(json);
-      var link = json.Search[0].Poster;
-      image.setAttribute("src", link);
-    });
-});
