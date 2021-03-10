@@ -94,3 +94,11 @@ div.scrollmenu label {
   padding: 14px;
   text-decoration: none;
 }
+
+.flip-card {
+  float: left;
+}
+
+main {
+  overflow: auto;
+}
