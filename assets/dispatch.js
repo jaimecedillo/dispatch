@@ -40,8 +40,9 @@ const marvel = {
                           <button class="btn-${i + 1} button content is-small level-item is-warning is-rounded"
                               onClick="javascript:window.open('${heroComic}', '_blank');">${name}'s
                               Comics</button>
-                          <button class="button content is-small is-warning level-item  is-rounded"
-                              onClick="javascript:window.open('./movie.html', '_blank');">Movies</button>
+                          <button id="movieBtn" class="button content is-small is-warning level-item  is-rounded"
+                              onClick='${getThisMovieResults}'
+                              >Movies</button>
                       </div>
                   </div>
               </div>
@@ -81,6 +82,49 @@ function displayCharacterOptions() {
       };
   });
           };
+
+          // searchButton.addEventListener("click", getMoviePoster);
+
+
+function getThisMovieResults() {
+
+  let name = json.data.results[i].name
+
+
+  var movieTitle = this.name;
+  console.log("ISTHISWORKING", movieTitle)
+  // var year = yearInput.value.trim();
+  // api key and the the search box functions
+  fetch(
+    "http://www.omdbapi.com/?s=" +
+    movieTitle +
+    // "&y=" +
+    // year +
+    "&apikey=8f0e2144"
+  )
+    .then((res) => res.json())
+    .then((json) => {
+      // console.log(json);
+
+      // var link = json.Search[0].Poster;
+      const array = json.Search.slice(0, 10)
+      // console.log(array)
+      for (let i = 0; i < array.length; i++) {
+        const movie = array[i];
+        console.log(movie)
+
+        const img = document.createElement("img")
+        // console.log(array)
+        // console.log(movie.Poster)
+        img.setAttribute("src", movie.Poster)
+        document.querySelector("#img").appendChild(img)
+      }
+      // build a 4 loop  and  then array slice method.
+
+    })
+
+};
+
 
 
 

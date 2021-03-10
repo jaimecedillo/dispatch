@@ -9,7 +9,10 @@ var searchButton = document.getElementById("search");
 // var image = document.getElementById("img");
 var imgPoster = document.getElementById("img")
 // search button
-searchButton.addEventListener("click", function() {
+searchButton.addEventListener("click", getMoviePoster);
+
+
+function getMoviePoster() {
 
   var movieTitle = titleInput.value.trim();
   // var year = yearInput.value.trim();
@@ -31,7 +34,7 @@ searchButton.addEventListener("click", function() {
       for (let i = 0; i < array.length; i++) {
         const movie = array[i];
         console.log(movie)
-    
+
         const img = document.createElement("img")
         // console.log(array)
         // console.log(movie.Poster)
@@ -40,10 +43,6 @@ searchButton.addEventListener("click", function() {
       }
       // build a 4 loop  and  then array slice method.
 
-    });
-});
+    })
 
-
-
-
- 
+};

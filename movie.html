@@ -1,23 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Movie Posters</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Marvel:ital@1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+  <link rel="stylesheet" href="./assets/style.css" />
 </head>
+<header class="has-background-black is-size-1 has-text-centered has-text-white pt-2 is-size-3-mobile">
+  <img class="logo" src="./assets/marvel-logo.jpg" alt="marvel logo" style="width:130px;height:52px;">
+  Characters
+</header>
+
 <body>
-  <section >
-  <input type="text" id="title">title</input>
-  <button id="search">search</button>
-<!-- need button from index cards to display here -->
-<!-- anchot tag -->
-<div id="img"></div>
+  <section>
+    <input type="text" id="title">title</input>
+    <button id="search">search</button>
+    <!-- need button from index cards to display here -->
+    <!-- anchot tag -->
+    <div id="img"></div>
 
-  
+
   </section>
-  <script src="./assets/movie.js">
+  <footer class="has-background-black is-size-3 has-text-centered has-text-white">
+    <a href="http://marvel.com" target="_blank" class="mr-5 p-2 is-size-6-mobile">Data provided by Marvel. ©
+      2021 MARVEL</a>
 
-  </script>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+  <script src="./assets/movie.js"></script>
+  <script src="./assets/dispatch.js"></script>
 </body>
+
 </html>
