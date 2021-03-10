@@ -3,7 +3,7 @@
 // mavel characters list
 let heroName = ["Spider-Man", "thor", 'captain america', 'Black Panther', 'doctor strange', 'Ant-Man (Scott Lang)', 'Iron man', 'Hulk', 'Deadpool', 'wolverine', 'Captain Marvel (Carol Danvers)', 'Daredevil'];
 
-// fucntion to fetch marvel charactes img, name and 
+// fucntion to fetch marvel charactes img, name, bio url and comics url
 const marvel = {
   render: (hero) => {
 
@@ -25,22 +25,28 @@ const marvel = {
           $('main').append(`
           <div class="container">
           <div class="flip-card" id="hero-${i + 1}">
-          <div class="flip-card-inner">
-              <div class="flip-card-front">
-                  ${heroImg}
+              <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                      ${heroImg}
+                  </div>
+                  <div class="flip-card-back has-background-black">
+                      <h1
+                          class="Name-${i + 1} card-header-title level-item is-size-3 has-text-weight-semibold has-text-white has-background-danger-dark">
+                          ${name}</h1>
+                      <div class="card-content">
+                          <button class="btn-${i + 1} button content is-small level-item is-warning  is-rounded"
+                              onClick="javascript:window.open('${heroBio}', '_blank');">${name}'s
+                              Bio</button>
+                          <button class="btn-${i + 1} button content is-small level-item is-warning is-rounded"
+                              onClick="javascript:window.open('${heroComic}', '_blank');">${name}'s
+                              Comics</button>
+                          <button class="button content is-small is-warning level-item  is-rounded"
+                              onClick="javascript:window.open('./movie.html', '_blank');">Movies</button>
+                      </div>
+                  </div>
               </div>
-          <div class="flip-card-back has-background-danger-dark">
-              <h1 class="Name-${i + 1} card-header is-size-3 has-text-centered has-text-weight-semibold has-text-white">
-                      ${name}</h1>
-                  <button class="btn-${i + 1}" onClick="javascript:window.open('${heroBio}', '_blank');">${name}'s
-                      Bio</button>
-                      <button class="btn-${i + 1}" onClick="javascript:window.open('${heroComic}', '_blank');">${name}'s
-                      Comics</button>
-                  <button class="button is-centered is-info is-outlined is-rounded">Movies</button>
-             </div>
           </div>
-        </div>
-        </div>
+      </div>
 
 `)
         }
@@ -59,7 +65,7 @@ heroName.forEach(function (item) {
 console.log(marvel + "CODE");
 
 function displayCharacterOptions() {
-  
+
   fetch(urlApi)
     .then((res) => {
       return res.json();
