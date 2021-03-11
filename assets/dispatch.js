@@ -86,11 +86,11 @@ $(document).on("click", function (e) {
   }
 })
 function getThisMovieResults(movieTitle) {
-  // let name = json.data.results[i].name
-  // var movieTitle = this.name;
-  // console.log("Is this working", movieTitle)
+  let name = json.data.results[i].name
+  var movieTitle = this.name;
+  console.log("Is this working", movieTitle)
 
-  // var year = yearInput.value.trim();
+  var year = yearInput.value.trim();
   // api key and the the search box functions
   fetch(
   `http://www.omdbapi.com/?s=${movieTitle}&apikey=8f0e2144`
