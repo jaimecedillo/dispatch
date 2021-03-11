@@ -74,7 +74,13 @@ a:hover {
   text-decoration: none;
 }
 
+#hide-chars {
+  display: none;
+}
 
+#hide-movies {
+  display: none;
+}
 /* NAV BAR SCROLLING FUNCTIONALITY */
 
 div.scrollmenu {
