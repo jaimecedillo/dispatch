@@ -41,7 +41,7 @@ const marvel = {
                               onClick="javascript:window.open('${heroComic}', '_blank');">${name}'s
                               Comics</button>
                           <button id="movieBtn" class="button content is-small is-warning level-item  is-rounded"
-                              onClick='${getThisMovieResults}'
+                              
                               >Movies</button>
                       </div>
                   </div>
@@ -53,6 +53,14 @@ const marvel = {
       });
   },
 };
+
+$(document).on("click", function(e){
+  if(e.target && e.target.id === "movieBtn"){
+    getThisMovieResults() 
+  }
+})
+
+
 
 heroName.forEach(function (item) {
 
