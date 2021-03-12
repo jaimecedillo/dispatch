@@ -108,3 +108,15 @@ div.scrollmenu label {
 main {
   overflow: auto;
 }
+
+.movie-posters {
+  height: 100px;
+  border: 10px solid #03ade9;
+  margin-top: 1900px;
+  text-align: center;
+}
+
+.movie-posters h2 {
+  font-size: 50px;
+  font-weight: bolder;
+}
