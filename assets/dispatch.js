@@ -36,7 +36,7 @@ const marvel = {
                           <button class="btn-${i + 1} button content is-small level-item is-warning is-rounded"
                               onClick="javascript:window.open('${heroComic}', '_blank');">${name}'s
                               Comics</button>
-                          <button class="search button content is-small is-warning level-item  is-rounded" id="movie" value="${name}">Movies</button>
+                          
                     
                       </div>
                   </div>
