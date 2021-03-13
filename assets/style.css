@@ -6,12 +6,9 @@ body {
     margin: 0;
     padding: 0;
 }
-
-
-#reset {
-  background-color:#eb1d28;
+.hide {
+  display: none;
 }
-
 /* Card Flip CSS Code */
  /* This container is needed for the front and back side */
 .flip-card {
@@ -107,45 +104,4 @@ div.scrollmenu label {
 
 main {
   overflow: auto;
-}
-
-.movie-posters {
-  height: 100px;
-  border: 10px solid #03ade9;
-  margin-top: 1900px;
-  text-align: center;
-  background-color: #03ade9;
-}
-
-.movie-posters h2 {
-  font-size: 50px;
-  font-weight: bolder;
-}
-
-.posters {
-  margin: 5px;
-}
-
-@media screen and (max-width: 1024px) {
-  .movie-posters {
-    margin-top: 2600px;
-  }
-}
-
-@media screen and (max-width: 769px) {
-  .movie-posters {
-    margin-top: 5850px;
-  }
-}
-
-@media screen and (max-width: 426px) {
-  .movie-posters {
-    margin-top: 10px;
-    height: 65px;
-  }
-
-  .movie-posters h2 {
-    font-size: 30px;
-  }
-
 }
