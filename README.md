@@ -24,7 +24,7 @@
 [Marvel Characters](https://cody1967.github.io/dispatch/)
 
 
-![Application Screenshot](https://github.com/cody1967/dispatch/blob/main/screenshot.png)
+![Application Screenshot](https://github.com/cody1967/dispatch/blob/main/screenshot.jpg)
 
 ### Data provided by Marvel. © 2021 MARVEL
      
