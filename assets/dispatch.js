@@ -180,7 +180,7 @@ function getMoviePoster(name) {
             (k + 1) +
             "card-header-title level-item is-size-3 has-text-weight-semibold has-text-white has-background-danger-dark"
         );
-        flipCardBackName.innerHTML = movieTitle + "<br>" + movieYear;
+        flipCardBackName.innerHTML = movieTil + "<br>" + movieYear;
 
         // CARD CONTENT
         let cardContent = document.createElement("div");
