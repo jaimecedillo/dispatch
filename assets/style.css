@@ -11,6 +11,9 @@ body {
 .hide {
   display: none;
 }
+.container {
+  margin-left: 19%;
+}
 /* Card Flip CSS Code */
  /* This container is needed for the front and back side */
 .flip-card {
@@ -42,7 +45,7 @@ body {
   -webkit-backface-visibility: hidden;   /*safari*/
   backface-visibility: hidden;
 }
-/* style the front side (fallback id image is missing */
+/* style the front side  */
 .flip-card-front {
   /* background-color: #eb1d28; */
   color:black
@@ -78,25 +81,7 @@ a:hover {
 #hide-movies {
   display: none;
 }
-/* NAV BAR SCROLLING FUNCTIONALITY */
 
-div.scrollmenu {
-  background-color: black;
-  overflow: auto;
-  white-space: nowrap;
-}
-
-div.scrollmenu::-webkit-scrollbar {
-  display: none;
-}
-
-div.scrollmenu label {
-  display: inline-block;
-  color: white;
-  text-align: center;
-  padding: 14px;
-  text-decoration: none;
-}
 
 .flip-card {
   float: left;
@@ -106,3 +91,6 @@ main {
   overflow: auto;
 }
 
+button {
+  margin-top: 15px;
+}
