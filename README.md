@@ -1,3 +1,4 @@
+
 # Marvel Characters
 * Created by: Jaime Cedillo, Juan Arechiga, Robert McShinsky, and Cody McNeill.
 * Fun way to learn more about a Marvel Character and find a movie to watch or comic to read. 
@@ -24,7 +25,7 @@
 [Marvel Characters](https://cody1967.github.io/dispatch/)
 
 
-![Application Screenshot](https://github.com/cody1967/dispatch/blob/main/screenshot.jpg)
+![Application Screenshot](https://user-images.githubusercontent.com/74879881/120933511-bd2ba100-c6b7-11eb-8300-8d4867f671ab.jpg)
 
 ### Data provided by Marvel. © 2021 MARVEL
      
